@@ -39,7 +39,7 @@ export default function AboutPage() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/8GhZKo_wD78"
+              src="https://www.youtube.com/embed/yrOLyydQm4w"
               title="DropPlanner Explainer Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
