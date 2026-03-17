@@ -1,4 +1,4 @@
-import { streamText } from 'ai'
+import { streamText, Output } from 'ai'
 import { after } from 'next/server'
 import { NextRequest } from 'next/server'
 import { supabase } from '@/lib/supabase'
@@ -14,22 +14,25 @@ export async function POST(req: NextRequest) {
 
   const result = streamText({
     model: 'anthropic/claude-haiku-4.5',
+    output: Output.object({ schema: planSchema }),
     system: buildSystemPrompt({ genre, songCount, releaseDate, postsPerWeek }),
     prompt: 'Generate the release timeline now.',
   })
 
   after(async () => {
     try {
-      const text = await result.text
-      const parsed = planSchema.parse(JSON.parse(text))
-      await supabase.from('plans').insert({
-        id: planId,
-        genre,
-        song_count: songCount,
-        release_date: releaseDate,
-        posts_per_week: postsPerWeek,
-        milestones: parsed.milestones,
-      })
+      // result.output contains the fully assembled, type-validated object
+      const parsed = await result.output
+      if (parsed) {
+        await supabase.from('plans').insert({
+          id: planId,
+          genre,
+          song_count: songCount,
+          release_date: releaseDate,
+          posts_per_week: postsPerWeek,
+          milestones: parsed.milestones,
+        })
+      }
     } catch (e) {
       console.error('[generate] failed to save plan:', e)
     }
