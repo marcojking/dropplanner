@@ -19,9 +19,14 @@ export default function ContactPage() {
             marcojking@gmail.com
           </a>
           
-          <a href="https://github.com/marcojking" target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
-            <span className="w-6 shrink-0 text-left">💻</span> 
-            github.com/marcojking
+          <a href="https://www.instagram.com/marcojking/" target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
+            <span className="w-6 shrink-0 text-left">📸</span> 
+            @marcojking
+          </a>
+
+          <a href="https://www.linkedin.com/in/marcojking/" target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
+            <span className="w-6 shrink-0 text-left">💼</span> 
+            linkedin.com/in/marcojking
           </a>
 
           <a href="https://marcoking.com" target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
