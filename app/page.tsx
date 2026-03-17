@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 
 export default function HomePage() {
   return (
@@ -28,7 +26,7 @@ export default function HomePage() {
         <div className="pt-2">
           <Link
             href="/generate"
-            className={cn(buttonVariants({ size: 'lg' }), 'text-base px-8')}
+            className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground text-base font-medium px-8 h-9 transition-all hover:opacity-90"
           >
             Plan my release →
           </Link>
