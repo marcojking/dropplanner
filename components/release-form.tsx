@@ -49,13 +49,22 @@ export function ReleaseForm() {
       const planId = res.headers.get('X-Plan-Id')
       if (!planId) throw new Error('No plan ID returned')
 
-      // Drain the stream before redirecting so the server finishes saving
+      // Drain the stream so the server's after() callback can fire
       const reader = res.body?.getReader()
       if (reader) {
         while (true) {
           const { done } = await reader.read()
           if (done) break
         }
+      }
+
+      // Wait for the after() Supabase save to complete before redirecting
+      // Poll the plan page to confirm data exists (up to 5 seconds)
+      const maxAttempts = 10
+      for (let i = 0; i < maxAttempts; i++) {
+        await new Promise((r) => setTimeout(r, 500))
+        const check = await fetch(`/plan/${planId}`, { method: 'HEAD' })
+        if (check.ok) break
       }
 
       router.push(`/plan/${planId}`)
