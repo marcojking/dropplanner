@@ -23,7 +23,7 @@ export default function AboutPage() {
                 Between finishing the masters, shooting the music video, and trying to figure out Spotify pitching deadlines, it's easy to let things slip through the cracks.
               </p>
               <p>
-                My two biggest passions are making music and filmmaking. Whether I'm producing a track in the studio or directing 
+                I'm passionate about both making music and filmmaking. Whether I'm producing a track in the studio or directing 
                 behind the camera on an indie short film or music video shoot, I love the entire creative process. 
                 DropPlanner is my way of giving independent artists the structured rollout strategy they deserve, 
                 so they can spend less time guessing and more time creating.
