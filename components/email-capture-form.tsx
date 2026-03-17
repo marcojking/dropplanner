@@ -24,7 +24,7 @@ export function EmailCaptureForm() {
         </div>
         <h3 className="font-semibold text-foreground mb-1">You're on the list!</h3>
         <p className="text-sm text-muted-foreground text-center">
-          We'll notify you when DropPlanner Pro launches.
+          We'll keep you posted on the latest updates.
         </p>
       </div>
     )
@@ -33,8 +33,8 @@ export function EmailCaptureForm() {
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="text-center mb-4">
-        <h3 className="font-semibold text-lg">Join the waitlist</h3>
-        <p className="text-sm text-muted-foreground">Get early access to DropPlanner Pro features and exclusive release strategies.</p>
+        <h3 className="font-semibold text-lg">Stay updated</h3>
+        <p className="text-sm text-muted-foreground">Be the first to hear about new features and updates to the app.</p>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
         <div className="flex-1 min-w-0 flex flex-col sm:flex-row gap-2">
