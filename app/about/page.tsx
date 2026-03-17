@@ -36,14 +36,16 @@ export default function AboutPage() {
         <section className="space-y-6">
           <h2 className="text-2xl font-semibold tracking-tight">The 30-Second Pitch</h2>
           <div className="aspect-video w-full max-w-3xl mx-auto rounded-xl overflow-hidden bg-muted border border-border shadow-sm relative">
-            {/* Placeholder for YouTube/Vimeo Embed */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground/50">
-              <svg className="w-16 h-16 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <p className="font-medium text-sm">[ Pitch Video Placeholder — Embed target ]</p>
-            </div>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/8GhZKo_wD78"
+              title="DropPlanner Explainer Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="absolute inset-0"
+            />
           </div>
         </section>
 
