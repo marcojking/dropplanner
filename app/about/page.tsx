@@ -11,7 +11,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-8 items-center sm:items-start">
             <div className="w-48 h-48 shrink-0 relative rounded-full overflow-hidden border-4 border-accent/20">
               <Image 
-                src="/media/thumb-mxBMbRbJpaT3yk0e.jpg" 
+                src="/media/headshot.jpg" 
                 alt="Marco King" 
                 fill 
                 className="object-cover"
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 />
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="relative rounded-xl overflow-hidden border border-border group">
                   <Image 
                     src="/media/AlbumCover.png" 
@@ -87,6 +87,14 @@ export default function AboutPage() {
                   <Image 
                     src="/media/IMG_8395.jpg" 
                     alt="Studio Session" 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden border border-border group">
+                  <Image 
+                    src="/media/thumb-mxBMbRbJpaT3yk0e.jpg" 
+                    alt="Headshot" 
                     fill 
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
