@@ -14,9 +14,9 @@ export default function ContactPage() {
         </div>
 
         <div className="space-y-4 pt-4">
-          <a href="mailto:marcojking@example.com" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
+          <a href="mailto:marcojking@gmail.com" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
             <span className="w-6 shrink-0 text-left">✉️</span> 
-            marcojking@example.com
+            marcojking@gmail.com
           </a>
           
           <a href="https://github.com/marcojking" target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", className: "w-full h-12 text-base justify-start px-6" })}>
